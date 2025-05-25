@@ -11,6 +11,17 @@ https://github.com/badafans/better-cloudflare-ip
 https://github.com/Alvin9999/new-pac
 
 # Docker 镜像加速收集网站
+https://docker.hpcloud.cloud
+https://docker.m.daocloud.io
+https://docker.unsee.tech
+https://docker.1panel.live
+http://mirrors.ustc.edu.cn
+https://docker.chenby.cn
+http://mirror.azure.cn
+https://dockerpull.org
+https://dockerhub.icu
+https://hub.rat.dev
+https://docker.m.daocloud.io
 https://github.com/cmliu/CF-Workers-docker.io
 https://github.com/tech-shrimp/docker_installer
 https://github.com/DaoCloud/public-image-mirror
