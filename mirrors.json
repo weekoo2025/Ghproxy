@@ -1,29 +1,35 @@
 {
-  "update_time": "2025-05-25T20:46:55.341327",
+  "update_time": "2025-05-25T22:29:31.898250",
   "github_mirrors": {
-    "count": 3,
+    "count": 11,
     "urls": [
+      "https://cors.isteed.cc",
       "https://dockerproxy.net",
-      "https://ghproxy.fsou.cc",
-      "https://ghps.cc"
+      "https://gh-proxy.com",
+      "https://gh.xmly.dev",
+      "https://ghfast.top",
+      "https://ghproxy.1888866.xyz",
+      "https://ghproxy.net",
+      "https://git.886.be",
+      "https://github.abskoop.workers.dev",
+      "https://github.moeyy.xyz",
+      "https://hub.gitmirror.com"
     ]
   },
   "docker_mirrors": {
-    "count": 13,
+    "count": 12,
     "urls": [
       "ccr.ccs.tencentyun.com",
+      "docker.hpcloud.cloud",
       "docker.m.daocloud.io",
-      "docker.mirrors.ustc.edu.cn",
-      "hub-mirror.c.163.com",
-      "mirror.baidubce.com",
-      "reg-mirror.qiniu.com",
+      "dockerpull.org",
+      "hub.rat.dev",
       "registry.cn-beijing.aliyuncs.com",
       "registry.cn-hangzhou.aliyuncs.com",
       "registry.cn-qingdao.aliyuncs.com",
       "registry.cn-shanghai.aliyuncs.com",
       "registry.cn-shenzhen.aliyuncs.com",
-      "registry.cn-zhangjiakou.aliyuncs.com",
-      "registry.docker-cn.com"
+      "registry.cn-zhangjiakou.aliyuncs.com"
     ]
   }
 }

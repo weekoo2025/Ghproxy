@@ -4,17 +4,25 @@
 
 ## 📊 统计信息
 
-- **最后更新**: 2025-05-25 20:46:55
-- **GitHub 镜像数量**: 3
-- **Docker 镜像数量**: 13
+- **最后更新**: 2025-05-25 22:29:31
+- **GitHub 镜像数量**: 11
+- **Docker 镜像数量**: 11
 
 ## 🔥 GitHub 文件加速
 
 以下是经过验证的 GitHub 文件加速镜像地址：
 
+- https://cors.isteed.cc
 - https://dockerproxy.net
-- https://ghproxy.fsou.cc
-- https://ghps.cc
+- https://gh-proxy.com
+- https://gh.xmly.dev
+- https://ghfast.top
+- https://ghproxy.1888866.xyz
+- https://ghproxy.net
+- https://git.886.be
+- https://github.abskoop.workers.dev
+- https://github.moeyy.xyz
+- https://hub.gitmirror.com
 
 ### 📖 使用方法
 
@@ -33,18 +41,16 @@ https://镜像地址/https://github.com/user/repo/releases/download/v1.0/file.zi
 以下是收集到的 Docker 镜像加速地址：
 
 - ccr.ccs.tencentyun.com
+- docker.hpcloud.cloud
 - docker.m.daocloud.io
-- docker.mirrors.ustc.edu.cn
-- hub-mirror.c.163.com
-- mirror.baidubce.com
-- reg-mirror.qiniu.com
+- dockerpull.org
+- hub.rat.dev
 - registry.cn-beijing.aliyuncs.com
 - registry.cn-hangzhou.aliyuncs.com
 - registry.cn-qingdao.aliyuncs.com
 - registry.cn-shanghai.aliyuncs.com
 - registry.cn-shenzhen.aliyuncs.com
 - registry.cn-zhangjiakou.aliyuncs.com
-- registry.docker-cn.com
 
 ### 📖 使用方法
 
@@ -88,4 +94,4 @@ sudo systemctl restart docker
 
 ---
 
-**最后更新时间**: 2025-05-25 20:46:55
+**最后更新时间**: 2025-05-25 22:29:31

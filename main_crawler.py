@@ -35,7 +35,6 @@ class MirrorCrawler:
             "521xueweihan/GitHub520",
             "fhefh2015/Fast-GitHub",
             "RC1844/FastGithub",
-            "dotnetcore/FastGithub",
             "dongyubin/DockerHub"
         ]
 
@@ -59,19 +58,29 @@ class MirrorCrawler:
         }
 
         self.known_docker_mirrors = {
-            "docker.m.daocloud.io",
-            "registry.cn-hangzhou.aliyuncs.com",
-            "registry.cn-shanghai.aliyuncs.com",
-            "registry.cn-beijing.aliyuncs.com",
-            "registry.cn-shenzhen.aliyuncs.com",
-            "ccr.ccs.tencentyun.com",
-            "hub-mirror.c.163.com",
-            "mirror.baidubce.com",
-            "registry.docker-cn.com",
-            "docker.mirrors.ustc.edu.cn",
-            "reg-mirror.qiniu.com",
-            "registry.cn-qingdao.aliyuncs.com",
-            "registry.cn-zhangjiakou.aliyuncs.com"
+            "https://docker.hpcloud.cloud",
+            "https://docker.m.daocloud.io",
+            "https://docker.unsee.tech",
+            "https://docker.1panel.live",
+            "http://mirrors.ustc.edu.cn",
+            "https://docker.chenby.cn",
+            "http://mirror.azure.cn",
+            "https://dockerpull.org",
+            "https://dockerhub.icu",
+            "https://hub.rat.dev",
+            "https://docker.m.daocloud.io",
+            "https://registry.cn-hangzhou.aliyuncs.com",
+            "https://registry.cn-shanghai.aliyuncs.com",
+            "https://registry.cn-beijing.aliyuncs.com",
+            "https://registry.cn-shenzhen.aliyuncs.com",
+            "https://ccr.ccs.tencentyun.com",
+            "https://hub-mirror.c.163.com",
+            "https://mirror.baidubce.com",
+            "https://registry.docker-cn.com",
+            "https://docker.mirrors.ustc.edu.cn",
+            "https://reg-mirror.qiniu.com",
+            "https://registry.cn-qingdao.aliyuncs.com",
+            "https://registry.cn-zhangjiakou.aliyuncs.com"
         }
 
     def fetch_content(self, url: str) -> str:
@@ -201,17 +210,21 @@ class MirrorCrawler:
 
     def test_github_mirror_content(self, mirror_url: str) -> dict:
         """测试 GitHub 镜像的内容下载功能"""
-        test_file_url = "https://gist.githubusercontent.com/weekoo2025/7a8bcb034d5d223384101b8c4773089a/raw/all.txt"
+        # 使用指定的测试文件
+        test_file_url = "https://raw.githubusercontent.com/weekoo2025/Ghproxy/refs/heads/main/README.md"
         test_url = f"{mirror_url}/{test_file_url}"
 
         result = {
             'url': mirror_url,
             'status': 'unknown',
             'response_time': None,
-            'content_valid': False
+            'content_valid': False,
+            'content_length': 0,
+            'content_preview': ''
         }
 
         try:
+            logger.info(f"🔍 测试: {test_url}")
             start_time = time.time()
             response = self.session.get(test_url, timeout=self.timeout)
             response_time = time.time() - start_time
@@ -220,22 +233,120 @@ class MirrorCrawler:
 
             if response.status_code == 200:
                 content = response.text.strip()
+                result['content_length'] = len(content)
+                result['content_preview'] = content[:100] + "..." if len(content) > 100 else content
 
-                # 验证内容有效性
-                if (len(content) > 50 and
-                    ('http' in content.lower() or 'docker' in content.lower() or
-                     'registry' in content.lower() or 'mirror' in content.lower())):
+                # 验证 README 文件内容
+                # 检查是否包含预期的关键词
+                keywords_found = []
+                check_keywords = ['github', 'mirror', '镜像', 'proxy', 'docker', '加速']
+
+                for keyword in check_keywords:
+                    if keyword in content.lower():
+                        keywords_found.append(keyword)
+
+                # 验证条件：内容长度 > 100 且包含至少2个关键词
+                if len(content) > 100 and len(keywords_found) >= 2:
                     result['status'] = 'available'
                     result['content_valid'] = True
+                    logger.info(f"✅ 内容验证通过: {mirror_url} (长度: {len(content)}, 关键词: {keywords_found})")
                 else:
                     result['status'] = 'content_invalid'
+                    logger.warning(f"❌ 内容验证失败: {mirror_url} (长度: {len(content)}, 关键词: {keywords_found})")
             else:
                 result['status'] = 'http_error'
+                logger.warning(f"❌ HTTP错误: {mirror_url} - {response.status_code}")
 
+        except requests.exceptions.Timeout:
+            result['status'] = 'timeout'
+            logger.warning(f"⏰ 请求超时: {mirror_url}")
+        except requests.exceptions.ConnectionError:
+            result['status'] = 'connection_error'
+            logger.warning(f"🔌 连接失败: {mirror_url}")
         except Exception as e:
             result['status'] = 'error'
+            logger.warning(f"❌ 请求错误: {mirror_url} - {str(e)[:50]}")
 
         return result
+
+    def test_docker_mirror(self, mirror_url: str) -> dict:
+        """测试 Docker 镜像的可用性"""
+        # 确保 URL 格式正确
+        if not mirror_url.startswith(('http://', 'https://')):
+            test_url = f"https://{mirror_url}"
+        else:
+            test_url = mirror_url
+
+        result = {
+            'url': mirror_url,
+            'status': 'unknown',
+            'response_time': None,
+            'registry_valid': False
+        }
+
+        try:
+            logger.info(f"🔍 测试 Docker 镜像: {test_url}")
+            start_time = time.time()
+
+            # 测试 Docker Registry v2 API
+            registry_url = f"{test_url}/v2/"
+            response = self.session.get(registry_url, timeout=self.timeout)
+            response_time = time.time() - start_time
+
+            result['response_time'] = round(response_time * 1000, 2)
+
+            if response.status_code == 200:
+                # 检查响应是否包含 Docker Registry 相关信息
+                content = response.text.lower()
+                if 'docker' in content or 'registry' in content or response.headers.get('docker-distribution-api-version'):
+                    result['status'] = 'available'
+                    result['registry_valid'] = True
+                    logger.info(f"✅ Docker 镜像可用: {mirror_url} ({result['response_time']}ms)")
+                else:
+                    result['status'] = 'not_registry'
+                    logger.warning(f"❌ 不是有效的 Docker Registry: {mirror_url}")
+            elif response.status_code == 401:
+                # 401 通常表示需要认证，但 Registry 是可用的
+                result['status'] = 'available'
+                result['registry_valid'] = True
+                logger.info(f"✅ Docker 镜像可用 (需要认证): {mirror_url} ({result['response_time']}ms)")
+            else:
+                result['status'] = 'http_error'
+                logger.warning(f"❌ Docker 镜像 HTTP 错误: {mirror_url} - {response.status_code}")
+
+        except requests.exceptions.Timeout:
+            result['status'] = 'timeout'
+            logger.warning(f"⏰ Docker 镜像请求超时: {mirror_url}")
+        except requests.exceptions.ConnectionError:
+            result['status'] = 'connection_error'
+            logger.warning(f"🔌 Docker 镜像连接失败: {mirror_url}")
+        except Exception as e:
+            result['status'] = 'error'
+            logger.warning(f"❌ Docker 镜像请求错误: {mirror_url} - {str(e)[:50]}")
+
+        return result
+
+    def validate_docker_mirrors(self):
+        """验证 Docker 镜像的可用性"""
+        logger.info("🧪 开始验证 Docker 镜像...")
+
+        valid_mirrors = []
+
+        with ThreadPoolExecutor(max_workers=3) as executor:
+            future_to_url = {executor.submit(self.test_docker_mirror, url): url
+                           for url in self.docker_mirrors}
+
+            for future in as_completed(future_to_url):
+                result = future.result()
+
+                if result['registry_valid']:
+                    valid_mirrors.append(result['url'])
+                    logger.info(f"✅ {result['url']} ({result['response_time']}ms)")
+                else:
+                    logger.warning(f"❌ {result['url']} - {result['status']}")
+
+        self.docker_mirrors = set(valid_mirrors)
+        logger.info(f"📊 Docker 镜像验证完成: {len(valid_mirrors)} 个可用")
 
     def validate_github_mirrors(self):
         """验证 GitHub 镜像的可用性"""
@@ -252,7 +363,7 @@ class MirrorCrawler:
 
                 if result['content_valid']:
                     valid_mirrors.append(result['url'])
-                    logger.info(f"✅ {result['url']} ({result['response_time']}ms)")
+                    logger.info(f"✅ {result['url']} ({result['response_time']}ms) - 内容长度: {result['content_length']}")
                 else:
                     logger.warning(f"❌ {result['url']} - {result['status']}")
 
@@ -416,10 +527,13 @@ sudo systemctl restart docker
         # 步骤3: 验证 GitHub 镜像
         self.validate_github_mirrors()
 
-        # 步骤4: 生成数据文件
+        # 步骤4: 验证 Docker 镜像
+        self.validate_docker_mirrors()
+
+        # 步骤5: 生成数据文件
         self.generate_mirrors_json()
 
-        # 步骤5: 生成 README
+        # 步骤6: 生成 README
         self.generate_readme()
 
         end_time = time.time()
