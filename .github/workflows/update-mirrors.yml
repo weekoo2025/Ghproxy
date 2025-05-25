@@ -72,25 +72,59 @@ jobs:
         git commit -m "🔄 自动更新镜像地址 - $(date '+%Y-%m-%d %H:%M:%S')"
         git push
 
+    - name: 生成发布标签
+      if: steps.check-changes.outputs.has_changes == 'true'
+      id: release-tag
+      run: |
+        TAG_NAME="v$(date '+%Y%m%d-%H%M%S')"
+        RELEASE_NAME="镜像地址更新 $(date '+%Y-%m-%d')"
+        GITHUB_COUNT=$(jq '.github_mirrors.count' mirrors.json)
+        DOCKER_COUNT=$(jq '.docker_mirrors.count' mirrors.json)
+        UPDATE_TIME=$(jq -r '.update_time' mirrors.json)
+
+        echo "tag_name=$TAG_NAME" >> $GITHUB_OUTPUT
+        echo "release_name=$RELEASE_NAME" >> $GITHUB_OUTPUT
+        echo "github_count=$GITHUB_COUNT" >> $GITHUB_OUTPUT
+        echo "docker_count=$DOCKER_COUNT" >> $GITHUB_OUTPUT
+        echo "update_time=$UPDATE_TIME" >> $GITHUB_OUTPUT
+
     - name: 创建发布
       if: steps.check-changes.outputs.has_changes == 'true'
       uses: actions/create-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: v$(date '+%Y%m%d-%H%M%S')
-        release_name: 镜像地址更新 $(date '+%Y-%m-%d')
+        tag_name: ${{ steps.release-tag.outputs.tag_name }}
+        release_name: ${{ steps.release-tag.outputs.release_name }}
         body: |
           ## 📊 本次更新统计
 
-          - GitHub 镜像数量: $(jq '.github_mirrors.count' mirrors.json)
-          - Docker 镜像数量: $(jq '.docker_mirrors.count' mirrors.json)
-          - 更新时间: $(jq -r '.update_time' mirrors.json)
+          - GitHub 镜像数量: ${{ steps.release-tag.outputs.github_count }}
+          - Docker 镜像数量: ${{ steps.release-tag.outputs.docker_count }}
+          - 更新时间: ${{ steps.release-tag.outputs.update_time }}
 
           ## 📁 文件说明
 
           - `mirrors.json`: 完整的镜像地址数据
           - `README.md`: 使用说明和镜像列表
           - `source_urls.txt`: 数据源配置
+
+          ## 🚀 使用方法
+
+          ### GitHub 文件加速
+          ```bash
+          # 将原始链接前缀替换为镜像地址
+          https://镜像地址/https://github.com/user/repo/file
+          ```
+
+          ### Docker 镜像加速
+          ```bash
+          # 配置 Docker 镜像加速器
+          sudo tee /etc/docker/daemon.json <<-'EOF'
+          {
+            "registry-mirrors": ["https://docker.m.daocloud.io"]
+          }
+          EOF
+          ```
         draft: false
         prerelease: false
