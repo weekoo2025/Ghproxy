@@ -1,11 +1,12 @@
 {
-  "update_time": "2025-05-25T20:46:55.341327",
+  "update_time": "2025-05-25T14:00:02.985686",
   "github_mirrors": {
-    "count": 3,
+    "count": 4,
     "urls": [
       "https://dockerproxy.net",
       "https://ghproxy.fsou.cc",
-      "https://ghps.cc"
+      "https://ghps.cc",
+      "https://user:TOKEN@ghproxy.com"
     ]
   },
   "docker_mirrors": {
