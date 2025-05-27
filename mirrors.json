@@ -1,9 +1,10 @@
 {
-  "update_time": "2025-05-26T02:47:20.986244",
+  "update_time": "2025-05-27T02:41:34.488923",
   "github_mirrors": {
-    "count": 12,
+    "count": 13,
     "urls": [
       "https://cors.isteed.cc",
+      "https://dockerproxy.net",
       "https://gh-proxy.com",
       "https://gh.ddlc.top",
       "https://gh.xmly.dev",
