@@ -4,7 +4,7 @@
 
 ## 📊 统计信息
 
-- **最后更新**: 2025-06-29 02:58:36
+- **最后更新**: 2025-06-30 02:54:31
 - **GitHub 镜像数量**: 12
 - **Docker 镜像数量**: 10
 
@@ -42,6 +42,7 @@ https://镜像地址/https://github.com/user/repo/releases/download/v1.0/file.zi
 以下是收集到的 Docker 镜像加速地址：
 
 - ccr.ccs.tencentyun.com
+- docker.hpcloud.cloud
 - docker.m.daocloud.io
 - dockerpull.org
 - hub.rat.dev
@@ -49,7 +50,6 @@ https://镜像地址/https://github.com/user/repo/releases/download/v1.0/file.zi
 - registry.cn-hangzhou.aliyuncs.com
 - registry.cn-qingdao.aliyuncs.com
 - registry.cn-shanghai.aliyuncs.com
-- registry.cn-shenzhen.aliyuncs.com
 - registry.cn-zhangjiakou.aliyuncs.com
 
 ### 📖 使用方法
@@ -94,4 +94,4 @@ sudo systemctl restart docker
 
 ---
 
-**最后更新时间**: 2025-06-29 02:58:36
+**最后更新时间**: 2025-06-30 02:54:31
