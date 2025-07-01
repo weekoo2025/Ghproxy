@@ -4,9 +4,9 @@
 
 ## 📊 统计信息
 
-- **最后更新**: 2025-06-30 02:54:31
-- **GitHub 镜像数量**: 12
-- **Docker 镜像数量**: 10
+- **最后更新**: 2025-07-01 03:01:02
+- **GitHub 镜像数量**: 14
+- **Docker 镜像数量**: 11
 
 ## 🔥 GitHub 文件加速
 
@@ -20,10 +20,12 @@
 - https://ghfast.top
 - https://ghproxy.1888866.xyz
 - https://ghproxy.net
+- https://git.886.be
 - https://github.abskoop.workers.dev
 - https://github.moeyy.xyz
 - https://hub.gitmirror.com
 - https://proxy.vvvv.ee
+- https://user:TOKEN@ghproxy.com
 
 ### 📖 使用方法
 
@@ -50,6 +52,7 @@ https://镜像地址/https://github.com/user/repo/releases/download/v1.0/file.zi
 - registry.cn-hangzhou.aliyuncs.com
 - registry.cn-qingdao.aliyuncs.com
 - registry.cn-shanghai.aliyuncs.com
+- registry.cn-shenzhen.aliyuncs.com
 - registry.cn-zhangjiakou.aliyuncs.com
 
 ### 📖 使用方法
@@ -94,4 +97,4 @@ sudo systemctl restart docker
 
 ---
 
-**最后更新时间**: 2025-06-30 02:54:31
+**最后更新时间**: 2025-07-01 03:01:02

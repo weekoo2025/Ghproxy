@@ -1,7 +1,7 @@
 {
-  "update_time": "2025-06-30T02:54:31.011311",
+  "update_time": "2025-07-01T03:01:02.792232",
   "github_mirrors": {
-    "count": 12,
+    "count": 14,
     "urls": [
       "https://cors.isteed.cc",
       "https://dockerproxy.net",
@@ -11,14 +11,16 @@
       "https://ghfast.top",
       "https://ghproxy.1888866.xyz",
       "https://ghproxy.net",
+      "https://git.886.be",
       "https://github.abskoop.workers.dev",
       "https://github.moeyy.xyz",
       "https://hub.gitmirror.com",
-      "https://proxy.vvvv.ee"
+      "https://proxy.vvvv.ee",
+      "https://user:TOKEN@ghproxy.com"
     ]
   },
   "docker_mirrors": {
-    "count": 11,
+    "count": 12,
     "urls": [
       "ccr.ccs.tencentyun.com",
       "docker.hpcloud.cloud",
@@ -29,6 +31,7 @@
       "registry.cn-hangzhou.aliyuncs.com",
       "registry.cn-qingdao.aliyuncs.com",
       "registry.cn-shanghai.aliyuncs.com",
+      "registry.cn-shenzhen.aliyuncs.com",
       "registry.cn-zhangjiakou.aliyuncs.com"
     ]
   }
