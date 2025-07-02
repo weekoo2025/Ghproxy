@@ -1,7 +1,7 @@
 {
-  "update_time": "2025-07-01T03:01:02.792232",
+  "update_time": "2025-07-02T02:48:23.449257",
   "github_mirrors": {
-    "count": 14,
+    "count": 13,
     "urls": [
       "https://cors.isteed.cc",
       "https://dockerproxy.net",
@@ -11,7 +11,6 @@
       "https://ghfast.top",
       "https://ghproxy.1888866.xyz",
       "https://ghproxy.net",
-      "https://git.886.be",
       "https://github.abskoop.workers.dev",
       "https://github.moeyy.xyz",
       "https://hub.gitmirror.com",
@@ -20,10 +19,9 @@
     ]
   },
   "docker_mirrors": {
-    "count": 12,
+    "count": 11,
     "urls": [
       "ccr.ccs.tencentyun.com",
-      "docker.hpcloud.cloud",
       "docker.m.daocloud.io",
       "dockerpull.org",
       "hub.rat.dev",
