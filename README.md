@@ -4,9 +4,9 @@
 
 ## 📊 统计信息
 
-- **最后更新**: 2025-07-03 02:50:40
-- **GitHub 镜像数量**: 13
-- **Docker 镜像数量**: 9
+- **最后更新**: 2025-07-04 02:48:40
+- **GitHub 镜像数量**: 12
+- **Docker 镜像数量**: 10
 
 ## 🔥 GitHub 文件加速
 
@@ -24,7 +24,6 @@
 - https://github.moeyy.xyz
 - https://hub.gitmirror.com
 - https://proxy.vvvv.ee
-- https://user:TOKEN@ghproxy.com
 
 ### 📖 使用方法
 
@@ -45,6 +44,7 @@ https://镜像地址/https://github.com/user/repo/releases/download/v1.0/file.zi
 - ccr.ccs.tencentyun.com
 - docker.m.daocloud.io
 - dockerpull.org
+- hub.rat.dev
 - registry.cn-beijing.aliyuncs.com
 - registry.cn-hangzhou.aliyuncs.com
 - registry.cn-qingdao.aliyuncs.com
@@ -94,4 +94,4 @@ sudo systemctl restart docker
 
 ---
 
-**最后更新时间**: 2025-07-03 02:50:40
+**最后更新时间**: 2025-07-04 02:48:40
