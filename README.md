@@ -4,7 +4,7 @@
 
 ## 📊 统计信息
 
-- **最后更新**: 2025-08-20 02:39:35
+- **最后更新**: 2025-08-21 02:39:20
 - **GitHub 镜像数量**: 11
 - **Docker 镜像数量**: 10
 
@@ -21,8 +21,8 @@
 - https://ghproxy.1888866.xyz
 - https://ghproxy.net
 - https://github.abskoop.workers.dev
-- https://github.moeyy.xyz
 - https://proxy.vvvv.ee
+- https://user:TOKEN@ghproxy.com
 
 ### 📖 使用方法
 
@@ -93,4 +93,4 @@ sudo systemctl restart docker
 
 ---
 
-**最后更新时间**: 2025-08-20 02:39:35
+**最后更新时间**: 2025-08-21 02:39:20
