@@ -4,9 +4,9 @@
 
 ## 📊 统计信息
 
-- **最后更新**: 2025-09-28 02:40:09
+- **最后更新**: 2025-09-29 02:26:01
 - **GitHub 镜像数量**: 10
-- **Docker 镜像数量**: 10
+- **Docker 镜像数量**: 9
 
 ## 🔥 GitHub 文件加速
 
@@ -47,7 +47,6 @@ https://镜像地址/https://github.com/user/repo/releases/download/v1.0/file.zi
 - registry.cn-hangzhou.aliyuncs.com
 - registry.cn-qingdao.aliyuncs.com
 - registry.cn-shanghai.aliyuncs.com
-- registry.cn-shenzhen.aliyuncs.com
 - registry.cn-zhangjiakou.aliyuncs.com
 
 ### 📖 使用方法
@@ -92,4 +91,4 @@ sudo systemctl restart docker
 
 ---
 
-**最后更新时间**: 2025-09-28 02:40:09
+**最后更新时间**: 2025-09-29 02:26:01
