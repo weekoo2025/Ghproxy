@@ -1,5 +1,5 @@
 {
-  "update_time": "2025-10-22T02:41:24.918896",
+  "update_time": "2025-10-23T02:26:28.029375",
   "github_mirrors": {
     "count": 11,
     "urls": [
@@ -17,9 +17,8 @@
     ]
   },
   "docker_mirrors": {
-    "count": 11,
+    "count": 10,
     "urls": [
-      "ccr.ccs.tencentyun.com",
       "docker.m.daocloud.io",
       "dockerpull.org",
       "hub.rat.dev",
