@@ -4,9 +4,9 @@
 
 ## 📊 统计信息
 
-- **最后更新**: 2025-10-23 02:26:28
-- **GitHub 镜像数量**: 11
-- **Docker 镜像数量**: 9
+- **最后更新**: 2025-10-24 02:22:57
+- **GitHub 镜像数量**: 10
+- **Docker 镜像数量**: 10
 
 ## 🔥 GitHub 文件加速
 
@@ -22,7 +22,6 @@
 - https://ghproxy.net
 - https://github.abskoop.workers.dev
 - https://proxy.vvvv.ee
-- https://user:TOKEN@ghproxy.com
 
 ### 📖 使用方法
 
@@ -40,6 +39,7 @@ https://镜像地址/https://github.com/user/repo/releases/download/v1.0/file.zi
 
 以下是收集到的 Docker 镜像加速地址：
 
+- ccr.ccs.tencentyun.com
 - docker.m.daocloud.io
 - dockerpull.org
 - hub.rat.dev
@@ -92,4 +92,4 @@ sudo systemctl restart docker
 
 ---
 
-**最后更新时间**: 2025-10-23 02:26:28
+**最后更新时间**: 2025-10-24 02:22:57
