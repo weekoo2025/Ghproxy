@@ -1,7 +1,7 @@
 {
-  "update_time": "2026-01-04T03:08:44.758123",
+  "update_time": "2026-01-05T03:11:03.707223",
   "github_mirrors": {
-    "count": 10,
+    "count": 9,
     "urls": [
       "https://cors.isteed.cc",
       "https://dockerproxy.net",
@@ -11,8 +11,7 @@
       "https://ghfast.top",
       "https://ghproxy.net",
       "https://github.abskoop.workers.dev",
-      "https://proxy.vvvv.ee",
-      "https://user:TOKEN@ghproxy.com"
+      "https://proxy.vvvv.ee"
     ]
   },
   "docker_mirrors": {
