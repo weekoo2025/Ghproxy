@@ -4,8 +4,8 @@
 
 ## 📊 统计信息
 
-- **最后更新**: 2026-03-08 03:30:43
-- **GitHub 镜像数量**: 10
+- **最后更新**: 2026-03-09 03:34:26
+- **GitHub 镜像数量**: 11
 - **Docker 镜像数量**: 10
 
 ## 🔥 GitHub 文件加速
@@ -13,6 +13,7 @@
 以下是经过验证的 GitHub 文件加速镜像地址：
 
 - https://cors.isteed.cc
+- https://dockerproxy.link
 - https://dockerproxy.net
 - https://gh-proxy.com
 - https://gh.ddlc.top
@@ -92,4 +93,4 @@ sudo systemctl restart docker
 
 ---
 
-**最后更新时间**: 2026-03-08 03:30:43
+**最后更新时间**: 2026-03-09 03:34:26
