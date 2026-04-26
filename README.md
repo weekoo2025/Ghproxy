@@ -4,8 +4,8 @@
 
 ## 📊 统计信息
 
-- **最后更新**: 2026-04-25 03:52:17
-- **GitHub 镜像数量**: 13
+- **最后更新**: 2026-04-26 04:23:09
+- **GitHub 镜像数量**: 11
 - **Docker 镜像数量**: 11
 
 ## 🔥 GitHub 文件加速
@@ -20,8 +20,6 @@
 - https://gh.xmly.dev
 - https://ghfast.top
 - https://ghproxy.1888866.xyz
-- https://ghproxy.net
-- https://github.abskoop.workers.dev
 - https://mirror.houlang.cloud
 - https://proxy.vvvv.ee
 - https://user:TOKEN@ghproxy.com
@@ -96,4 +94,4 @@ sudo systemctl restart docker
 
 ---
 
-**最后更新时间**: 2026-04-25 03:52:17
+**最后更新时间**: 2026-04-26 04:23:09
