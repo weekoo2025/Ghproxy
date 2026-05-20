@@ -4,9 +4,9 @@
 
 ## 📊 统计信息
 
-- **最后更新**: 2026-05-19 05:01:29
+- **最后更新**: 2026-05-20 05:05:34
 - **GitHub 镜像数量**: 12
-- **Docker 镜像数量**: 11
+- **Docker 镜像数量**: 10
 
 ## 🔥 GitHub 文件加速
 
@@ -42,7 +42,6 @@ https://镜像地址/https://github.com/user/repo/releases/download/v1.0/file.zi
 以下是收集到的 Docker 镜像加速地址：
 
 - ccr.ccs.tencentyun.com
-- docker.hpcloud.cloud
 - docker.m.daocloud.io
 - dockerhub.icu
 - hub.rat.dev
@@ -95,4 +94,4 @@ sudo systemctl restart docker
 
 ---
 
-**最后更新时间**: 2026-05-19 05:01:29
+**最后更新时间**: 2026-05-20 05:05:34
