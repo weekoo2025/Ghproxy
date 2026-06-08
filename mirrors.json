@@ -1,7 +1,7 @@
 {
-  "update_time": "2026-06-07T05:22:25.509933",
+  "update_time": "2026-06-08T05:51:34.806731",
   "github_mirrors": {
-    "count": 10,
+    "count": 11,
     "urls": [
       "https://cors.isteed.cc",
       "https://dockerproxy.link",
@@ -12,6 +12,7 @@
       "https://ghfast.top",
       "https://ghproxy.net",
       "https://mirror.houlang.cloud",
+      "https://proxy.vvvv.ee",
       "https://user:TOKEN@ghproxy.com"
     ]
   },
