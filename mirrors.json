@@ -1,5 +1,5 @@
 {
-  "update_time": "2026-09-05T05:18:45.623299",
+  "update_time": "2026-09-06T05:34:12.322950",
   "github_mirrors": {
     "count": 10,
     "urls": [
@@ -11,7 +11,7 @@
       "https://gh.xmly.dev",
       "https://ghfast.top",
       "https://ghproxy.net",
-      "https://proxy.vvvv.ee",
+      "https://mirror.houlang.cloud",
       "https://user:TOKEN@ghproxy.com"
     ]
   },
