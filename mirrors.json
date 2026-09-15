@@ -1,5 +1,5 @@
 {
-  "update_time": "2026-09-14T05:51:58.204717",
+  "update_time": "2026-09-15T05:55:07.182977",
   "github_mirrors": {
     "count": 10,
     "urls": [
@@ -16,10 +16,11 @@
     ]
   },
   "docker_mirrors": {
-    "count": 10,
+    "count": 11,
     "urls": [
       "ccr.ccs.tencentyun.com",
       "docker.m.daocloud.io",
+      "dockerhub.icu",
       "hub.rat.dev",
       "registry.cn-beijing.aliyuncs.com",
       "registry.cn-hangzhou.aliyuncs.com",
