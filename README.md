@@ -4,9 +4,9 @@
 
 ## 📊 统计信息
 
-- **最后更新**: 2026-09-19 05:31:49
-- **GitHub 镜像数量**: 11
-- **Docker 镜像数量**: 9
+- **最后更新**: 2026-09-20 05:47:24
+- **GitHub 镜像数量**: 10
+- **Docker 镜像数量**: 10
 
 ## 🔥 GitHub 文件加速
 
@@ -21,7 +21,6 @@
 - https://ghfast.top
 - https://ghproxy.net
 - https://mirror.houlang.cloud
-- https://proxy.vvvv.ee
 - https://user:TOKEN@ghproxy.com
 
 ### 📖 使用方法
@@ -42,6 +41,7 @@ https://镜像地址/https://github.com/user/repo/releases/download/v1.0/file.zi
 
 - ccr.ccs.tencentyun.com
 - docker.m.daocloud.io
+- dockerhub.icu
 - hub.rat.dev
 - registry.cn-beijing.aliyuncs.com
 - registry.cn-hangzhou.aliyuncs.com
@@ -92,4 +92,4 @@ sudo systemctl restart docker
 
 ---
 
-**最后更新时间**: 2026-09-19 05:31:49
+**最后更新时间**: 2026-09-20 05:47:24
