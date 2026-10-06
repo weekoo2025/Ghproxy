@@ -4,7 +4,7 @@
 
 ## 📊 统计信息
 
-- **最后更新**: 2026-10-05 06:35:47
+- **最后更新**: 2026-10-06 07:14:51
 - **GitHub 镜像数量**: 9
 - **Docker 镜像数量**: 10
 
@@ -16,10 +16,10 @@
 - https://dockerproxy.link
 - https://dockerproxy.net
 - https://gh-proxy.com
-- https://gh.ddlc.top
 - https://ghfast.top
 - https://ghproxy.net
 - https://mirror.houlang.cloud
+- https://proxy.vvvv.ee
 - https://user:TOKEN@ghproxy.com
 
 ### 📖 使用方法
@@ -91,4 +91,4 @@ sudo systemctl restart docker
 
 ---
 
-**最后更新时间**: 2026-10-05 06:35:47
+**最后更新时间**: 2026-10-06 07:14:51
